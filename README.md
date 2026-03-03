@@ -2,3 +2,4 @@
 Testing purpose
 Outline of this project.
 Line from main branch
+Line from conflict-test branch
