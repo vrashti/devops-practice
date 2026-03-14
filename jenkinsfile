@@ -1,0 +1,46 @@
+pipeline
+{
+    agent any
+
+    stages
+    {
+        stage('Clone code')
+        {
+            steps
+            {
+                echo 'Building...'
+                git 'https://github.com/vrashti/devops-practice.git'
+                // Add your build commands here
+            }
+        }
+
+        stage('build')
+        {
+            steps
+            {
+                echo 'Building...'
+                sh 'mvn clean package'
+                // Add your test commands here
+            }
+        }
+
+        stage('Test')
+        {
+            steps
+            {
+                echo 'Testing...'
+                sh 'mvn test'
+                // Add your test commands here
+            }
+        }
+
+        stage('Deploy')
+        {
+            steps
+            {
+                echo 'Deploying...'
+                // Add your deploy commands here
+            }
+        }
+    }
+}
