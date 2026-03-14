@@ -18,7 +18,7 @@ pipeline
         {
             steps
             {
-                echo 'Building.'
+                echo 'Building....'
                 sh 'mvn clean package'
                 // Add your test commands here
             }
